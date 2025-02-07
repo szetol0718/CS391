@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | Resume</title>
+    <link rel="stylesheet" href="styles/projects.css">
+    <script defer src="scripts/calculator.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/me.jpg" alt="Yat Long Szeto (Louis)" class="profile-image">
+        <div class="header-text">
+            <h1>Projects</h1>
+            <p>My Programming & Development Work</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>My Programming Projects</h2>
+
+        <section class="calculator-container">
+            <h3> JavaScript Calculator</h3>
+            <div class="calculator">
+                <input type="text" id="num1" placeholder="Enter first number">
+                <input type="text" id="num2" placeholder="Enter second number">
+
+                <div class="buttons">
+                    <button onclick="add()">+</button>
+                    <button onclick="subtract()">−</button>
+                    <button onclick="multiply()">×</button>
+                    <button onclick="divide()">÷</button>
+                    <button onclick="power()">power</button>
+                    <button onclick="clearFields()">Clear</button>
+                </div>
+
+                <h4>Result: <span id="output">_</span></h4>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>All Rights Reserved by Yat Long Szeto (Louis) <a href="#">Credits</a> ©</p>
+    </footer>
+</body>
+</html>
