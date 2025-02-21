@@ -10,35 +10,34 @@ const JokesContainer = styled.div`
 `;
 
 const JokeCard = styled.div`
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: lightyellow;
+    border-radius: 15px;
+    border: 3px solid gold;
     padding: 20px;
     width: 60%;
-    max-width: 600px;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-
+    font-family: "Comic Sans MS", "Papyrus", cursive;
+    font-size: 18px;
+    box-shadow: 5px 5px 10px gray;
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    }
+        box-shadow: 0px 6px 12px darkgray;
 `;
 
-const JokeTitle = styled.h1`
-    font-size: 20px;
-    color: #333;
+const JokeType = styled.div`
+    font-size: 16px;
+    color: darkorange; 
 `;
 
-const JokeType = styled.h2`
-    font-size: 14px;
-    color: #888;
+const JokeTitle = styled.div`
+    font-size: 22px;
+    color: tomato; 
     margin-bottom: 10px;
 `;
 
-const Punchline = styled.p`
+const Punchline = styled.div`
     font-size: 16px;
-    color: #555;
+    color: darkgreen; 
 `;
 
 export default function Jokes(props: { data?: Joke[] }) {
@@ -47,13 +46,13 @@ export default function Jokes(props: { data?: Joke[] }) {
             {props.data && props.data.length > 0 ? (
                 props.data.map((data: Joke) => (
                     <JokeCard key={data.id}>
-                        <JokeTitle>{data.setup}</JokeTitle>
-                        <JokeType>{data.type}</JokeType>
+                        <JokeType>{data.type} joke</JokeType>
+                        <JokeTitle>{data.setup}</JokeTitle>                        
                         <Punchline>{data.punchline}</Punchline>
                     </JokeCard>
                 ))
             ) : (
-                <p>Loading jokes...</p>
+                <p>No jokes found! Try another number.</p>
             )}
         </JokesContainer>
     );
