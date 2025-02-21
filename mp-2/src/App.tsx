@@ -1,7 +1,8 @@
-import Jokes from "./components/Joke.tsx";
+
 import styled from "styled-components";
 import {useEffect, useState} from "react";
-import {Joke} from "./interfaces/Joke.ts";
+import Jokes from "../components/Jokes"
+import {Joke} from "../interfaces/Joke.ts"
 
 const ParentDiv=styled.div`
     width: 80vw;
@@ -17,16 +18,17 @@ export default function App(){
     // useEffect Hook for error handling and re-rendering.
     useEffect(() => {
         async function fetchData(): Promise<void> {
-            const rawData = await fetch("https://official-joke-api.appspot.com/random_joke");
-            const {results} : {results: Joke[]} = await rawData.json();
-            setData(results);
+            const rawData = await fetch("https://official-joke-api.appspot.com/jokes/random/20");
+            const jokes: Joke[] = await rawData.json();
+            setData(jokes);
         }
         fetchData()
             .then(() => console.log("Data fetched successfully"))
             .catch((e: Error) => console.log("There was the error: " + e));
-    }, [data.length]);
+    }, []);
 
     return(
+        
         <ParentDiv>
             <Jokes data={data}/>
         </ParentDiv>
