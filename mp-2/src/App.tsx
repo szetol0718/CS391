@@ -4,10 +4,21 @@ import {useEffect, useState} from "react";
 import Jokes from "../components/Jokes"
 import {Joke} from "../interfaces/Joke.ts"
 
-const ParentDiv=styled.div`
+const AppContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: lightsteelblue;
+`;
+
+const ContentWrapper = styled.div`
     width: 80vw;
-    margin: auto;
-    border: 5px darkgoldenrod solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: lavender;
+    box-shadow: 0px 4px 10px black;
+    border: 2px solid darkslateblue; 
 `;
 
 export default function App(){
@@ -26,12 +37,12 @@ export default function App(){
             .then(() => console.log("Data fetched successfully"))
             .catch((e: Error) => console.log("There was the error: " + e));
     }, []);
-
-    return(
-        
-        <ParentDiv>
-            <Jokes data={data}/>
-        </ParentDiv>
-    )
+    return (
+      <AppContainer>
+          <ContentWrapper>
+              <Jokes data={data} />
+          </ContentWrapper>
+      </AppContainer>
+  );
 }
 
