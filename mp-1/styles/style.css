@@ -12,6 +12,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    font-size: calc(14px + 0.5vw);
 }
 
 header {
@@ -30,17 +31,16 @@ header {
     border-radius: 8px;
     margin-right: 20px;
     border: 3px solid white;
+    max-width: 100%;
 }
 
 .header-text h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
+    font-size: calc(20px + 1vw);
 }
 
 .header-text p {
-    font-size: 1.2rem;
+    font-size: calc(14px + 0.3vw);
 }
-
 
 nav {
     background-color: #333;
@@ -48,21 +48,19 @@ nav {
     border-radius: 5px;
     padding: 10px;
     text-align: center;
+    width: 30%;
+    float: left;
 }
-
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-direction: row; 
-    max-width: 30%; 
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
 }
 
-
 nav ul li {
-    margin: 10px;
+    margin: 10px 0;
 }
 
 nav ul li a {
@@ -72,18 +70,18 @@ nav ul li a {
     padding: 10px 15px;
     display: block;
     background-color: #444;
-
+    width: 100%;
+    text-align: center;
 }
-
 
 main {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    max-width: 70%; 
+    max-width: 70%;
+    float: right;
 }
-
 
 footer {
     background-color: #333;
@@ -92,11 +90,22 @@ footer {
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
+    clear: both;
 }
 
 @media (max-width: 1000px) {
-    main {
-        max-width: 100%; 
+    main, nav {
+        float: none;
+        max-width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
     }
 }
 
@@ -114,10 +123,5 @@ footer {
     nav ul {
         flex-direction: row;
         justify-content: space-around;
-        max-width: 100%; 
-    }
-
-    nav ul li {
-        margin-bottom: 0;
     }
 }
