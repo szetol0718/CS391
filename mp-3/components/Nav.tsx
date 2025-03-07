@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router";
-
+import '../src/styles/style.css';
 const Nav = () => {
     return (
         <nav>
