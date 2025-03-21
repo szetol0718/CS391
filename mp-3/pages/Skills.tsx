@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Skills & Certifications | Resume</title>
-    <link type="text/css" rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <header>
-        <img src="images/me.jpg" alt="Yat Long Szeto (Louis)" class="profile-image">
-        <div class="header-text">
-            <h1>Skills & Certifications</h1>
-            <p>Technical Expertise & Areas of Proficiency</p>
-        </div>
-    </header>
+import React from 'react';
+import '../src/styles/style.css';
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="certifications.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
-    </nav>
-
-    <main>
+const Skills = () => {
+    return (
+        <main>
         <h2>My Technical Skillset</h2>
 
         <section >
@@ -58,10 +36,7 @@
         </section>
 
     </main>
+    );
+};
 
-    <footer>
-        <p>All Rights Reserved by Yat Long Szeto (Louis) <a href="#">Credits</a> ©</p>
-    </footer>
-</body>
-</html>
-
+export default Skills;

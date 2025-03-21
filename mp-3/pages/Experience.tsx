@@ -1,36 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Experience | Resume</title>
-    <link type="text/css" rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <header>
-        <img src="images/me.jpg" alt="Yat Long Szeto (Louis)" class="profile-image">
-        <div class="header-text">
-            <h1>Experience</h1>
-            <p>My Professional and Work Experience</p>
-        </div>
-    </header>
+import React from 'react';
+import '../src/styles/style.css';
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="certifications.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
-    </nav>
-
-    <main>
+const Experience = () => {
+    return (
+        <main>
         <h2>Working Experience</h2>
 
             <div>
                 <h3>Academic Tutor, Hong Kong</h3>
-                <img src="images/tutor.jpeg">
+                <img src="/images/tutor.jpeg" alt= "tutor"/>
                 <p><strong>May 2021 - August 2023</strong></p>
                 <ul>
                     <li>Delivered personalized tutoring sessions in physics, programming, and mathematics for students across various levels.</li>
@@ -48,9 +26,7 @@
             <li>Mandarin</li>
         </ul>
     </main>
+    );
+};
 
-    <footer>
-        <p>All Rights Reserved by Yat Long Szeto (Louis) <a href="#">Credits</a> ©</p>
-    </footer>
-</body>
-</html>
+export default Experience;

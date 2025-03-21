@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Projects | Resume</title>
-    <link rel="stylesheet" href="styles/projects.css">
+    <link type="text/css" rel="stylesheet" href="styles/projects.css">
     <script defer src="scripts/calculator.js"></script>
 </head>
 <body>
@@ -27,30 +27,25 @@
     </nav>
 
     <main>
-        <h2></h2>
-
         <section class="calculator-container">
-            <h3> HOW??? Calculator</h3>
-            <div class="calculator">
-                <input type="text" id="num1" placeholder="Enter first number:77?">
-                <input type="text" id="num2" placeholder="Enter second number:3?">
+            <h3>Calculator</h3>
+            <label for="num1">Enter first number:</label>
+            <input type="text" id="num1" placeholder="First number">
+            <label for="num2">Enter second number:</label>
+            <input type="text" id="num2" placeholder="Second number">
 
-                <div class="buttons">
-                    <button onclick="add()">+</button>
-                    <button onclick="subtract()">−</button>
-                    <button onclick="multiply()">×</button>
-                    <button onclick="divide()">÷</button>
-                    <button onclick="power()">**</button>
-                    <button onclick="clearFields()">Clear</button>
-                </div>
-
-                <h4>Result: <span id="output">defense wins championships?</span></h4>
+            <div class="buttons">
+                <button onclick="add()">+</button>
+                <button onclick="subtract()">−</button>
+                <button onclick="multiply()">×</button>
+                <button onclick="divide()">÷</button>
+                <button onclick="power()">^</button>
+                <button onclick="clearFields()">Clear</button>
             </div>
-        </section>
-        <img src="images/luka.jpg">
-        <div>No matter the result I am getting traded</div>
-    </main>
 
+            <h4>Result: <span id="output">0</span></h4>
+        </section>
+    </main>
 
     <footer>
         <p>All Rights Reserved by Yat Long Szeto (Louis) <a href="#">Credits</a> ©</p>
