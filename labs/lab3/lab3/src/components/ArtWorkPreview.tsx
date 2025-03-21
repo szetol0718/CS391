@@ -4,6 +4,7 @@
 import { Artwork } from "../types";
 import { styled } from "styled-components";
 
+
 const ArtWorkPreviewDiv= styled.div`
     width:80vw;
     margin: auto;

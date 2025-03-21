@@ -5,7 +5,7 @@ export type Thumbnail = {
     alt_text:string;
 };
 
-export type Artwork={
+export type Artworkprops={
     id:number;
     title:string;
     thumbnail:Thumbnail;
